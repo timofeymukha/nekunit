@@ -9,9 +9,10 @@ init:
 - cmd: set PATH=%MSYS_DIR%;%PATH%
 
 install:
-- cmd: git clone https://github.com/Goddard-Fortran-Ecosystem/pFUnit.git 
+- cmd: git clone https://github.com/Goddard-Fortran-Ecosystem/pFUnit.git  /home/appveyor/projects/pFUnit
 - cmd: cd pFUnit && mkdir b && cd b 
 - cmd: cmake .. && make && make install && cd ../../
 
 test_script:
 - echo "HEJSAN"
+- ls /home/appveyor/projects/pFUnit/b
