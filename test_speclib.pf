@@ -1,0 +1,21 @@
+
+! A mock for the exitt function
+subroutine exitt
+end subroutine
+
+@test
+subroutine test_speclib()
+   use funit
+
+   real z(1), w(1)
+
+   real x
+   call ZWGLL(z, w, 2)
+
+   x = z(1)
+
+   
+   @assertEqual(-3, z(1), 'z(1)')
+
+end subroutine
+
