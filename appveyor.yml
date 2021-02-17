@@ -5,8 +5,8 @@ build: false
 install:
 - echo "Hello"
 - git clone https://github.com/Goddard-Fortran-Ecosystem/pFUnit.git  /home/appveyor/projects/pFUnit
-- cd pFUnit && mkdir b && cd b 
-- cmake .. && make && make install && cd ../../
+- cd /home/appveyor/projects/pFUnit && mkdir build && cd build 
+- cmake .. && make && make install && cd /home/appveyor/projects/nekunit
 
 test_script:
 - echo "HEJSAN"
