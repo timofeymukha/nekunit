@@ -1,0 +1,17 @@
+image:
+- ubuntu
+
+clone_depth: 25
+
+build: off
+
+init:
+- cmd: set PATH=%MSYS_DIR%;%PATH%
+
+install:
+- cmd: git clone https://github.com/Goddard-Fortran-Ecosystem/pFUnit.git 
+- cmd: cd pFUnit && mkdir b && cd b 
+- cmd: cmake .. && make && make install && cd ../../
+
+test_script:
+- echo "HEJSAN"
