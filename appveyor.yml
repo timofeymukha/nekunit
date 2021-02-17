@@ -3,11 +3,13 @@ image: Ubuntu
 build: false
 
 install:
-- echo "Hello"
+- FC=gfortran
+- PFUNIT_DIR=/home/appveyor/projects/pFUnit/build/installed
 - git clone https://github.com/Goddard-Fortran-Ecosystem/pFUnit.git  /home/appveyor/projects/pFUnit
 - cd /home/appveyor/projects/pFUnit && mkdir build && cd build 
 - cmake .. && make && make install && cd /home/appveyor/projects/nekunit
 
 test_script:
-- echo "HEJSAN"
-- ls /home/appveyor/projects/pFUnit/b
+- echo $FC
+- echo $PFUNIT_DIR
+- ls /home/appveyor/projects/pFUnit/build
