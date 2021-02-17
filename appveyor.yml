@@ -1,13 +1,12 @@
-image:
-- ubuntu
+image: Ubuntu
 
-build: on
+build: false
 
 install:
-- cmd: echo "Hello"
-- cmd: git clone https://github.com/Goddard-Fortran-Ecosystem/pFUnit.git  /home/appveyor/projects/pFUnit
-- cmd: cd pFUnit && mkdir b && cd b 
-- cmd: cmake .. && make && make install && cd ../../
+- echo "Hello"
+- git clone https://github.com/Goddard-Fortran-Ecosystem/pFUnit.git  /home/appveyor/projects/pFUnit
+- cd pFUnit && mkdir b && cd b 
+- cmake .. && make && make install && cd ../../
 
 test_script:
 - echo "HEJSAN"
