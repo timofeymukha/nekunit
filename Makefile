@@ -1,4 +1,4 @@
-SRCS := speclib.f
+SRCS := $(NEK_SOURCE_ROOT)/core/speclib.f
 OBJS := $(SRCS:%.f=%.o)
 
 all: my_tests
@@ -35,4 +35,3 @@ $(eval $(call make_pfunit_test,my_tests))
 
 clean:
 	$(RM) *.o *.mod *.a *.inc test_square.F90 my_tests
-	echo $(LATEST_PFUNIT_DIR)
