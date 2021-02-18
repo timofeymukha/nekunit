@@ -11,5 +11,5 @@ install:
 - cmake .. && make && make install && cd /home/appveyor/projects/nekunit
 
 test_script:
-  ls $PFUNIT_DIR
+- ls $PFUNIT_DIR
 - make all
