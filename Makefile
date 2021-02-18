@@ -14,7 +14,7 @@ endif
 	$(FC) -c $(FFLAGS) $<
 
 
-LATEST_PFUNIT_DIR := $(lastword $(shell echo $(wildcard $(PFUNIT_DIR)/PFUNIT-4.*) | xargs -n1 | sort -V))
+LATEST_PFUNIT_DIR := $(PFUNIT_DIR)/PFUNIT-4.2
 include $(LATEST_PFUNIT_DIR)/include/PFUNIT.mk
 
 FFLAGS += $(PFUNIT_EXTRA_FFLAGS)
@@ -34,4 +34,5 @@ $(eval $(call make_pfunit_test,my_tests))
 
 
 clean:
-	$(RM) *.o *.mod *.a *.inc test_square.F90
+	$(RM) *.o *.mod *.a *.inc test_square.F90 my_tests
+	echo $(LATEST_PFUNIT_DIR)
