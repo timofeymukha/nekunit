@@ -13,3 +13,4 @@ install:
 test_script:
 - ls $PFUNIT_DIR
 - make all
+- ./my_tests
