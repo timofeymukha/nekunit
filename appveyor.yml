@@ -3,8 +3,8 @@ image: Ubuntu
 build: false
 
 install:
-- FC=gfortran
-- PFUNIT_DIR=/home/appveyor/projects/pFUnit/build/installed
+- export FC=gfortran
+- export PFUNIT_DIR=/home/appveyor/projects/pFUnit/build/installed
 - sudo apt-get install -y --no-install-recommends openmpi-bin openmpi-common
 - git clone https://github.com/Goddard-Fortran-Ecosystem/pFUnit.git  /home/appveyor/projects/pFUnit
 - cd /home/appveyor/projects/pFUnit && mkdir build && cd build 
